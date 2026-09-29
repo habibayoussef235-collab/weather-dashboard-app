@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🌤️ Weather App</h1>
+    <p class="subtitle">Enter a city name to get live weather info</p>
+
+    <form id="search-form" class="search-box">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter city name... e.g. Cairo"
+        autocomplete="off"
+      />
+      <button type="submit" id="search-btn">Search</button>
+    </form>
+
+    <div id="error" class="error hidden"></div>
+    <div id="loading" class="loading hidden">Loading...</div>
+
+    <section id="weather-card" class="weather-card hidden">
+      <h2 id="city-name">--</h2>
+      <p id="date-time" class="date-time"></p>
+      <div class="main-info">
+        <img id="weather-icon" src="" alt="weather icon" />
+        <div>
+          <p id="temperature" class="temp">--°C</p>
+          <p id="description" class="description">--</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="info-box">
+          <span class="label">Feels Like</span>
+          <span id="feels-like" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Humidity</span>
+          <span id="humidity" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Pressure</span>
+          <span id="pressure" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Wind Speed</span>
+          <span id="wind-speed" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Wind Direction</span>
+          <span id="wind-deg" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Visibility</span>
+          <span id="visibility" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Clouds</span>
+          <span id="clouds" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Sunrise</span>
+          <span id="sunrise" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Sunset</span>
+          <span id="sunset" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Country</span>
+          <span id="country" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Coordinates</span>
+          <span id="coords" class="value">--</span>
+        </div>
+        <div class="info-box">
+          <span class="label">Min / Max Temp</span>
+          <span id="min-max" class="value">--</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e90ff, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 15px;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #0072ff;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #0072ff;
+}
+
+.search-box button {
+  padding: 12px 22px;
+  background: #0072ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-box button:hover {
+  background: #005ed1;
+}
+
+.error {
+  background: #ffe0e0;
+  color: #c00;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.loading {
+  color: #0072ff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.weather-card {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.weather-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2px;
+}
+
+.date-time {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.main-info img {
+  width: 90px;
+  height: 90px;
+  background: #eef4ff;
+  border-radius: 50%;
+}
+
+.temp {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.info-box {
+  background: #f2f6ff;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+}
+
+@media (max-width: 480px) {
+  .search-box {
+    flex-direction: column;
+  }
+  .temp {
+    font-size: 2.2rem;
+  }
+}
